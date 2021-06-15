@@ -67,7 +67,9 @@ h3 {
 }
 
 .l0cv_arch_img{
-  width: 460px;
+  height: auto;
+  width: auto\9; 
+  width:60%;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
@@ -76,7 +78,9 @@ h3 {
 }
 
 .book_org_img{
-  width: 680px;
+  height: auto;
+  width: auto\9; 
+  width:90%;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
