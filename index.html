@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>L0CV: Computer Vision in Action</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" media="screen" />
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46895817-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="convnet_demo/convnet-min.js"></script>
+  <script src="convnet_demo/convnet_demo.js"></script>
+
+  <script>
+  function page_loaded() {
+    $('#convask').click(function(){
+      $("#explain").slideToggle('fast');
+    })
+    start_convnet_demo();
+  }
+  </script>
+</head>
+
+<body onload="page_loaded()">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand brand" href="index.html">L0CV Home</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html#l0cv-description"><b>L0CV Description</b></a></li>
+          <li><a href="index.html#book-logistics"><b>Book Logistics</b></a></li>
+          <li><a href=""><b>Online Read</b></a></li>
+          <li><a href=""><b>Office Hours</b></a></li>
+          <li><a href=""><b>Lecture Videos</b></a></li>
+          <li><a href=""><b>Log in</b></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <div id="header" style="text-align:center">
+	<a href="http://svl.stanford.edu">
+	  <img src="img/L0CV_logo.png" class="logo-left">
+	</a>
+	<a href="http://stanford.edu/">
+	  <img src="img/MaiweiAI_logo.jpg" class="logo-right">
+	</a>
+	<h1>L0CV: Computer Vision in Action</h1>
+	<h3>Charmve - Spring 2021</h3>
+	<div style="clear:both;"></div>
+  </div>
+
+  <div id="teaser">
+    <div id="convnetvis"></div>
+    <span class="glyphicon glyphicon-question-sign" id="convask"></span>
+    <div id="demomsg">
+      *This network is running live in your browser
+    </div>
+  </div>
+  <div class="container">
+    <div id="explain">
+      The Convolutional Neural Network in this example is classifying images live in your browser using Javascript, at about 10 milliseconds per image. It takes an input image and transforms it through a series of functions into class probabilities at the end. The transformed representations in this visualization can be loosely thought of as the activations of the neurons along the way. The parameters of this function are learned with backpropagation on a dataset of (image, label) pairs. This particular network is classifying <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a> images into one of 10 classes and was trained with <a href="http://cs.stanford.edu/people/karpathy/convnetjs/">ConvNetJS</a>. Its exact architecture is [conv-relu-conv-relu-pool]x3-fc-softmax, for a total of 17 layers and 7000 parameters. It uses 3x3 convolutions and 2x2 pooling regions. By the end of the class, you will know exactly what all these numbers mean.
+    </div>
+  </div>
+
+  <div id="header" style="text-align:center">
+    <h1><b>Where Everyone Can Learn Computer Vision</b></h1>
+  </div>>
+
+<div class="sechighlight">
+	<div class="container sec">
+	<h2>L0CV Description</h2>
+
+	<div id="coursedesc">
+		Computer Vision has become ubiquitous in our society, with applications in search, image understanding, apps, mapping, medicine, drones, and self-driving cars. Core to many of these applications are visual recognition tasks such as image classification, localization and detection. Recent developments in neural network (aka “deep learning”) approaches have greatly advanced the performance of these state-of-the-art visual recognition systems. This repo is a deep dive into the details of deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification. During the 21-chapter course, learners will learn to implement and train their own neural networks and gain a detailed understanding of cutting-edge research in computer vision. Additionally, the self-build package <b>``L0CV``</b> and running-live <b>``notebook``</b> will give them the opportunity to train and apply multi-million parameter networks on real-world vision problems of their choice. Through multiple hands-on tasks and the elementary research project, learners will acquire the toolset for setting up deep learning tasks and practical engineering tricks for training and fine-tuning deep neural networks.
+		<br><br>
+		<h1>
+			<img class="l0cv_arch_img" src="img/L0CV_Arch.png"  alt="L0CV Architecture">
+		</h1>
+	</div>
+	</div>
+</div>
+
+<div class="container sec" id="logistics">
+	<br>
+	<h2>Book Logistics</h2>
+	<br>
+		本学习资源以计算机视觉的发展历程和自顶向下的学习过程为核心，为读者提供一个 <b>``人人可学习计算机视觉的平台``</b>。我们围绕这样的组织逻辑：什么是计算机视觉？计算机视觉解决什么问题，都是怎么解决的？传统方法——以卷积神经网络为中心的神经网络；现代方法——Transformer、强化学习、迁移学习、生成对抗等。各种方法是如何实现的，用到了什么框架？在本资源中，这些问题都将会给予解决。
+	<br>
+	<h1>
+		<img class="book_org_img" src="img/book_framework.png" align="center" alt="L0CV Book Framework">
+	</h1>
+   
+	<!-- 
+	<ul>
+	  <li><b>Live Remote Lectures:</b> Tuesday/Thursday 1:00-2:20PM Pacific Time. Zoom link is posted on <a href="https://canvas.stanford.edu/courses/135672">Canvas</a>.</li>
+	  <li><b>Lecture Videos:</b> Will be posted on Canvas shortly after each lecture. These are unfortunately only accessible to enrolled Stanford students.</li>
+	  <li><b>Office Hours:</b> We've switched to using <a href="https://app.nooks.in/goto/CS-231N-Spring-21~lforYaBGfw2FID08?pwd=0iw2NC">Nooks</a> for office hours. You can find a full list of times and locations <a href="office_hours.html">on the calendar</a>.</li>
+	  <li><b>Contact:</b> Announcements and all course-related questions will happen on the <a href="http://piazza.com/stanford/spring2021/cs231n">Piazza</a> forum. For external enquiries, emergencies, or personal matters that you don't wish to put in a private post, you can email us at cs231n_02-spr2021-staff@lists.stanford.edu</li>
+	</ul>
+	-->
+</div>
+
+<div class="sechighlight">
+	<div class="container sec" id="logistics">
+		<br>
+		<h2>Book Organization</h2>
+		<br>
+		<h1>
+			<img class="book_org_img" src="img/book_org.png" align="center" alt="L0CV Book Organization">
+		</h1>
+	   
+		<!-- 
+		<ul>
+		  <li><b>Live Remote Lectures:</b> Tuesday/Thursday 1:00-2:20PM Pacific Time. Zoom link is posted on <a href="https://canvas.stanford.edu/courses/135672">Canvas</a>.</li>
+		  <li><b>Lecture Videos:</b> Will be posted on Canvas shortly after each lecture. These are unfortunately only accessible to enrolled Stanford students.</li>
+		  <li><b>Office Hours:</b> We've switched to using <a href="https://app.nooks.in/goto/CS-231N-Spring-21~lforYaBGfw2FID08?pwd=0iw2NC">Nooks</a> for office hours. You can find a full list of times and locations <a href="office_hours.html">on the calendar</a>.</li>
+		  <li><b>Contact:</b> Announcements and all course-related questions will happen on the <a href="http://piazza.com/stanford/spring2021/cs231n">Piazza</a> forum. For external enquiries, emergencies, or personal matters that you don't wish to put in a private post, you can email us at cs231n_02-spr2021-staff@lists.stanford.edu</li>
+		</ul>
+		-->
+	  </div>
+</div>
+
+<!-- L0CV GitHub Repo -->
+<div class="sechighlight">
+	<div class="container sec">
+	  <h2>ENJOY 🏄</h2>
+	  <h1>
+	  <div class="btns">
+		<a href="https://github.com/Charmve/computer-vision-in-action" target="_blank">
+			<span id="github" class="btn"><img src="img/github.png" alt="GitHub" width="31px"/> <b>GitHub</b><span>
+		</a>
+		<a href="https://github.com/Charmve/computer-vision-in-action/tree/main/notebooks" target="_blank">
+			<span id="juypter" class="btn"><img src="img/juypter.png" alt="Jupyter Notebook" width="28px"/> <b>Jupyter Notebook</b><span>
+		</a>
+	  </div>
+	  </h1>
+	</div>
+</div>
+
+<!-- Author Info -->
+<br>
+<div class="clear"></div>
+<div class="container sec">
+	<div class="footer">&#169; by Charmve
+		<br/><a href="https://charmve.github.io">charmve.github.io</a>
+		<br/>Follow me on GitHub <a href="https://github.com/charmve">@Charmve</a>
+	</div>
+</div>
+
+<br><br><br>
+<!--
+<div class="sechighlight">
+  <div class="container sec">
+    <h3>FAQ</h3>
+    <div class="qqa">
+      <div class="qq">Academic accommodations:</div>
+      <div class="qa">If you need an academic accommodation based on a disability, you should initiate the request with the <a href="https://oae.stanford.edu/accommodations/academic-accommodations">Office of Accessible Education (OAE)</a>. The OAE will evaluate the request, recommend accommodations, and prepare a letter for faculty. Students should contact the OAE as soon as possible and at any rate in advance of assignment deadlines, since timely notice is needed to coordinate accommodations. It is the student’s responsibility to reach out to the teaching staff regarding the OAE letter. Please send your letters to <strong>cs231n_02-spr2021-staff@lists.stanford.edu</strong></div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I take this course on credit/no cred basis?</div>
+      <div class="qa">Yes. Credit will be given to those who would have otherwise earned a C- or above.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I audit or sit in?</div>
+      <div class="qa">In general we are very open to auditing if you are a member of the Stanford community (registered student, staff, and/or faculty). Out of courtesy, we would appreciate that you first email us or talk to the instructor after the first class you attend.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I work in groups for the Final Project?</div>
+      <div class="qa">Yes, in groups of up to three people.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">I have a question about the class. What is the best way to reach the course staff?</div>
+      <div class="qa">Almost all questions should be asked on Piazza. If you have a sensitive issue you can email the instructors directly.</div>
+    </div>
+    <div class="qqa">
+      <div class="qq">Can I combine the Final Project with another course?</div>
+      <div class="qa"> Yes, you may; however before doing so you must receive permission from the instructors of both courses.</div>
+    </div>
+  </div>
+</div>
+-->
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- json 颜色显示 -->
+<script src="//unpkg.com/prismjs/components/prism-python.js"></script>
+<script src="//unpkg.com/docsify-copy-code"></script>
+
+</body>
+</html>

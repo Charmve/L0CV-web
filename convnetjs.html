@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>L0CV: Computer Vision in Action</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" media="screen" />
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Google fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <!-- Google Analytics -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-46895817-2', 'auto');
+  ga('send', 'pageview');
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <script src="convnet_demo/convnet-min.js"></script>
+  <script src="convnet_demo/convnet_demo.js"></script>
+
+  <script>
+  function page_loaded() {
+    $('#convask').click(function(){
+      $("#explain").slideToggle('fast');
+    })
+    start_convnet_demo();
+  }
+  </script>
+</head>
+
+<body onload="page_loaded()">
+	<div id="header" style="text-align:center">
+		<a href="http://svl.stanford.edu">
+		  <img src="img/L0CV_logo.png" class="logo-left">
+		</a>
+		<a href="http://stanford.edu/">
+		  <img src="img/MaiweiAI_logo.jpg" class="logo-right">
+		</a>
+		<h1>L0CV: Computer Vision in Action</h1>
+		<h3>Charmve - Spring 2021</h3>
+		<div style="clear:both;"></div>
+	</div>
+	
+	<div id="teaser">
+		<div id="convnetvis"></div>
+		<span class="glyphicon glyphicon-question-sign" id="convask"></span>
+		<div id="demomsg">
+		  *This network is running live in your browser
+		</div>
+	</div>
+
+	<div id="teaser">
+		<div id="convnetvis">
+			<div class="layer" id="inputlayer">
+				<canvas class="actmap" width="64" height="64">
+			</div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer" id="probsdiv">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32">
+				<canvas class="actmap" width="32" height="32"></div>
+			<div class="layer">
+				<div class="pp" style="width:44px;">ship</div>
+				<div class="pp" style="width:32px;">cat</div>
+				<div class="pp" style="width:17px;">bird</div>
+				<div class="pp" style="width:13px;">airplane</div>
+				<div class="pp" style="width:9px;">truck</div></div>
+		</div>
+		<span class="glyphicon glyphicon-question-sign" id="convask"></span>
+		<div id="demomsg">
+		  *This network is running live in your browser
+		</div>
+	  </div>
+	  <div class="container">
+			<div id="explain">
+			  The Convolutional Neural Network in this example is classifying images live in your browser using Javascript, at about 10 milliseconds per image. It takes an input image and transforms it through a series of functions into class probabilities at the end. The transformed representations in this visualization can be loosely thought of as the activations of the neurons along the way. The parameters of this function are learned with backpropagation on a dataset of (image, label) pairs. This particular network is classifying <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10</a> images into one of 10 classes and was trained with <a href="http://cs.stanford.edu/people/karpathy/convnetjs/">ConvNetJS</a>. Its exact architecture is [conv-relu-conv-relu-pool]x3-fc-softmax, for a total of 17 layers and 7000 parameters. It uses 3x3 convolutions and 2x2 pooling regions. By the end of the class, you will know exactly what all these numbers mean.
+			</div>
+	  </div>
+	  <div class="container sec">
+  		<h2>L0CV Description</h2>
+	  	<div id="coursedesc">
+		  	Computer Vision has become ubiquitous in our society, with applications in search, image understanding, apps, mapping, medicine, drones, and self-driving cars. Core to many of these applications are visual recognition tasks such as image classification, localization and detection. Recent developments in neural network (aka “deep learning”) approaches have greatly advanced the performance of these state-of-the-art visual recognition systems. This course is a deep dive into the details of deep learning architectures with a focus on learning end-to-end models for these tasks, particularly image classification. During the 10-week course, students will learn to implement and train their own neural networks and gain a detailed understanding of cutting-edge research in computer vision. Additionally, the final assignment will give them the opportunity to train and apply multi-million parameter networks on real-world vision problems of their choice. Through multiple hands-on assignments and the final course project, students will acquire the toolset for setting up deep learning tasks and practical engineering tricks for training and fine-tuning deep neural networks.
+			<br>
+			<img src="img/L0CV_Arch.png" align="center" alt="L0CV Architecture">
+		</div>
+	</div>
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+<div class="sechighlight">
+	<div class="container sec" id="logistics">
+	  <br>
+	  <h2>Book Logistics</h2>
+	  <br>
+	  <img src="../L0CV/book_org.png" align="center" alt="L0CV Book Organization">
+	  <!--
+	  <ul>
+		<li><b>Live Remote Lectures:</b> Tuesday/Thursday 1:00-2:20PM Pacific Time. Zoom link is posted on <a href="https://canvas.stanford.edu/courses/135672">Canvas</a>.</li>
+		<li><b>Lecture Videos:</b> Will be posted on Canvas shortly after each lecture. These are unfortunately only accessible to enrolled Stanford students.</li>
+		<li><b>Office Hours:</b> We've switched to using <a href="https://app.nooks.in/goto/CS-231N-Spring-21~lforYaBGfw2FID08?pwd=0iw2NC">Nooks</a> for office hours. You can find a full list of times and locations <a href="office_hours.html">on the calendar</a>.</li>
+		<li><b>Contact:</b> Announcements and all course-related questions will happen on the <a href="http://piazza.com/stanford/spring2021/cs231n">Piazza</a> forum. For external enquiries, emergencies, or personal matters that you don't wish to put in a private post, you can email us at cs231n_02-spr2021-staff@lists.stanford.edu</li>
+	  </ul>
+	  -->
+	</div>
+  </div>
+
+</html>
