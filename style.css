@@ -237,6 +237,8 @@ h3 {
   width: 16%;
 }
 .navbar-default .navbar-nav > li > a {
+  text-align: center;
+  vertical-align: middle;
   color: #ecf0f1;
 }
 .navbar-default .navbar-nav > li > a:hover,
