@@ -118,6 +118,49 @@ h3 {
   text-align:right;
 }
 
+.thumbnail {
+	height: 100%;
+	border-radius: 0;
+	background-color: #e6e6e6;
+	/* extra positioning */
+	display: flex;
+    flex-direction: column;
+}
+.thumbnail .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-example {
+	margin-bottom: 10px;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+.project-badge {
+	display: inline-block;
+	float: right;
+}
+.project-badge > a {
+	align: right;
+}
+
+.warning {
+  border: 2px ridge #f0f0;
+  background-color: #f0f0;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+}
+.warning img {
+  width: 100%;
+}
+.warning p {
+  font: small-caps bold 1.2rem sans-serif;
+  text-align: center;
+}
+
 .instructor {
   display: inline-block;
   width: 140px;
