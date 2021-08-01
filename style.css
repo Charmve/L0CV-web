@@ -329,12 +329,37 @@ body {
   .navbar-default .navbar-link:hover {
     color: #fbcbcc;
   }
+
+  .site-link:link,
+  .site-link:visited {
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2em;
+    height: 2em;
+    padding: 0 10px;
+    color: #c0392b;
+    border: 2px solid #c0392b;
+    font-weight: 50;
+  }
+
   
   /* Handle formatting on mobile */
   @media (max-width: 767px) {
     .navbar-default .navbar-collapse > ul > li {
       width: 100%;
       text-align: left;
+    }
+
+    .site-link:link,
+    .site-link:visited {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      color: #c0392b;
+      border: 2px solid #c0392b;
+      transform: translateY(-50%);
     }
   
     /* Force table to not be like tables anymore */
