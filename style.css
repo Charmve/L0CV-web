@@ -1,4 +1,4 @@
-body {
+  body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px;
@@ -342,78 +342,6 @@ body {
     color: #c0392b;
     border: 2px solid #c0392b;
     font-weight: 50;
-  }
-
-  .container-title {
-    height: 25px;
-    border-radius: 7px 7px 0px 0px;
-    background-color: #2e6da4;
-    padding-top: 5px;
-    padding-left: 5px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 14px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-  }
-
-  .container {
-      border-radius: 0px 0px 7px 7px;
-      border: 1px solid #ccc;
-      border-top: 0px;
-      padding: 12px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;
-  }
-
-  .container button {
-    border:1px solid #2e6da4;
-    background:none;
-    outline:none;
-    padding:5px;
-      border-radius: 4px 4px 4px 4px;
-      color: #2e6da4;
-      font-weight: bold;
-      cursor: pointer;
-  }
-
-  .container button:hover {
-      border:0;
-      color: #ffffff;
-      background: #2e6da4 none;
-      text-shadow: none;
-  }
-
-  div#form_element input {
-    height: 15px;
-    border: 0.8px solid #204d74;
-    border-left: 0;
-    padding: 2px 2px 2px 3px;
-  }
-
-  @-moz-document url-prefix() {
-      div#form_element input {
-          padding: 3px 2px 3px 3px;
-      }
-      select#form_select {
-          height: 23px;
-      }
-  }
-
-  div#form_element input:focus {
-      height: 18px;
-      background-color: #f1f1f1;
-      border: 0;
-  }
-
-  .form_element_text {
-      padding-left: 5px;
-      padding-top: 3px;
-      padding-right: 5px;
-      float: left;
-      color: #5e5e5e;
   }
   
   /* Handle formatting on mobile */
