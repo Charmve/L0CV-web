@@ -124,6 +124,22 @@
     width:100%;
     text-align:right;
   }
+
+  .running-item  {
+    max-width: 300px;
+  }
+  
+  .running-item img {
+    height: 40px;
+  }
+  
+  .running-item p {
+    padding: 20px;
+  }
+  
+  .running.mdl-grid {
+    padding: 20px 0 0 0;
+  }
   
   .thumbnail {
       height: 100%;
