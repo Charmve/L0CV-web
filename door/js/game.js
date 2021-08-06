@@ -805,9 +805,9 @@ var yourMessage = document.getElementById("your_message");
 var yourLink = document.getElementById("your_link");
 function linkChangey(){
 	if(yourMessage.value==""){
-		yourLink.value = "http://ncase.me/door/";
+		yourLink.value = "https://charmve.github.io/L0CV-web/door/";
 	}else{
-		yourLink.value = "http://ncase.me/door/#"+encodeURIComponent(encryptString(yourMessage.value));
+		yourLink.value = "https://charmve.github.io/L0CV-web/door/#"+encodeURIComponent(encryptString(yourMessage.value));
 	}
 };
 yourMessage.onchange = linkChangey;
