@@ -743,7 +743,7 @@ function iHeartYou(){
 	if(window.location.hash){
 		vtext.textContent = encryptString(decodeURIComponent(window.location.hash).substring(1));
 	}else{
-		vtext.textContent = "a lovely message from Charmve to you <3";
+		vtext.textContent = "a lovely message from me to you <3";
 	}
 
 	setTimeout(function(){
@@ -824,6 +824,41 @@ function socialShare(event,type){
 	var url = "";
 	var width = 640;
 	var height = 480;
+
+	switch(type){
+		case "facebook":
+			url += "https://www.facebook.com/sharer.php?u="+encodeURIComponent(link);
+			url += "&t="+encodeURIComponent("A lovely message for all my dear friends. This minigame only takes a minute to play, check it out! it's a(door)able --");
+			width = 626;
+			height = 436;
+			break;
+		case "twitter":
+			url += "https://twitter.com/share?url="+encodeURIComponent(link);
+			url += "&text="+encodeURIComponent("A lovely message for all my dear followers, in this 1-min minigame. http://pic.twitter.com/DK5vnPzEVn"); // add twitter pic.
+			url += "&via=ncasenmare";
+			width = 640;
+			height = 400;
+			break;
+		case "plus":
+			url += "https://plus.google.com/share?url="+encodeURIComponent(link);
+			width = 600;
+			height = 460;
+			break;
+		case "tumblr":
+			url += "https://www.tumblr.com/share/link?url="+encodeURIComponent(link);
+			url += "&name="+encodeURIComponent("it's a(door)able");
+			url += "&description="+encodeURIComponent("A lovely message for all my dear followers, in this 1-min minigame.");
+			width = 446;
+			height = 430;
+			break;
+		case "reddit":
+			window.open('http://www.reddit.com/submit?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(link)+'&amp;title='+encodeURIComponent("it's a(door)able: a one-minute minigame"), "reddit",'toolbar=no,width=700,height=550');
+			return false;
+			break;
+		case "stumbleupon":
+			url += "http://www.stumbleupon.com/submit?url="+encodeURIComponent(link);
+			break;
+	}
 
 	return sharePopup.call(this,event,{
 		href: url,

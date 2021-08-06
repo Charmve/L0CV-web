@@ -161,7 +161,29 @@ input#your_link{
 	transition: all 0.1s ease-out;
 
 }
-
+#share > div:hover{
+	opacity: 0.7;
+	top:-3px;
+}
+#share_facebook{
+	background: url(../icons/facebook.png);
+}
+#share_twitter{
+	background: url(../icons/twitter.png);
+}
+#share_plus{
+	background: url(../icons/plus.png);
+}
+#share_tumblr{
+	background: url(../icons/tumblr.png);
+}
+#share_reddit{
+	background: url(../icons/reddit.png);
+}
+#share_stumbleupon{
+	background: url(../icons/stumbleupon.png);
+	margin-right: 0px;
+}
 #bottom{
 	font-size: 17px;
 	position: absolute;
