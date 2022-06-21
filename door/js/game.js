@@ -743,7 +743,7 @@ function iHeartYou(){
 	if(window.location.hash){
 		vtext.textContent = encryptString(decodeURIComponent(window.location.hash).substring(1));
 	}else{
-		vtext.textContent = "a lovely message from <a href="https://github.com/Charmve" target="_blank">Charmve</a> to you <3";
+		vtext.textContent = "a lovely message from me to you <3";
 	}
 
 	setTimeout(function(){
@@ -805,9 +805,9 @@ var yourMessage = document.getElementById("your_message");
 var yourLink = document.getElementById("your_link");
 function linkChangey(){
 	if(yourMessage.value==""){
-		yourLink.value = "https://charmve.github.io/L0CV-web/door/";
+		yourLink.value = "http://ncase.me/door/";
 	}else{
-		yourLink.value = "https://charmve.github.io/L0CV-web/door/#"+encodeURIComponent(encryptString(yourMessage.value));
+		yourLink.value = "http://ncase.me/door/#"+encodeURIComponent(encryptString(yourMessage.value));
 	}
 };
 yourMessage.onchange = linkChangey;
@@ -935,4 +935,3 @@ window.LEVEL_CONFIG = [
 	}
 
 ];
-
