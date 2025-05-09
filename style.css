@@ -325,6 +325,15 @@
     color: #fbcbcc;
     background-color: #c0392b;
   }
+  .navbar-nav > li > a.centered-link {
+    display: flex !important;        /* 启用Flex布局 */
+    align-items: center !important;  /* 垂直居中 */
+    justify-content: center !important; /* 水平居中 */
+    height: 100%;                    /* 撑满父容器高度 */
+    text-align: center;              /* 文字水平居中（备用） */
+    padding-top: 15px;               /* 保持原有垂直间距 */
+    padding-bottom: 15px;            /* 保持原有垂直间距 */
+  }
   .navbar-default .navbar-toggle {
     border-color: #c0392b;
   }
